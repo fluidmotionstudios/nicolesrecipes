@@ -16,10 +16,10 @@
         %td= recipe.title
         %td= recipe.description
         %td= recipe.user_id
-        %td= link_to 'Show', recipe
-        %td= link_to 'Edit', edit_recipe_path(recipe)
-        %td= link_to 'Destroy', recipe, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'View Recipe', recipe
+        %td= link_to 'Edit Recipe', edit_recipe_path(recipe)
+        %td= link_to 'Delete Recipe', recipe, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Recipe', new_recipe_path
+= link_to 'New Recipe', new_recipe_path, class: "btn btn-success"
