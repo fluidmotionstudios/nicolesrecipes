@@ -1,25 +1,7 @@
-%h1 Listing recipes
-
-%table
-  %thead
-    %tr
-      %th Title
-      %th Description
-      %th User
-      %th
-      %th
-      %th
-
-  %tbody
-    - @recipes.each do |recipe|
-      %tr
-        %td= recipe.title
-        %td= recipe.description
-        %td= recipe.user_id
-        %td= link_to 'View Recipe', recipe
-        %td= link_to 'Edit Recipe', edit_recipe_path(recipe)
-        %td= link_to 'Delete Recipe', recipe, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Recipe', new_recipe_path, class: "btn btn-success"
+.row
+  - @recipes.each do |recipe|
+    .col-md-4
+      .recipe
+        .image_wrapper
+          = link_to recipe do
+            = image_tag recipe.image.url(:medium)
