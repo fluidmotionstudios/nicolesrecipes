@@ -81,13 +81,14 @@
  	@include box-shadow;
  	.image_wrapper {
  		max-width: 100%;
- 		border-radius: 5px 5px 5px 5px;
+ 		border-radius: 5px 5px 0 0;
  		overflow: hidden;
-    &:hover {
-      border-style: solid;
-      border-color: $red;
-    }
  	}
+  .date {
+    padding-left: 18px;
+    padding-bottom: 5px;
+    color: $red;
+  }
  	img {
  		width: 100%;
  		-webkit-transition: all .3s ease-out;
@@ -107,6 +108,9 @@
  		a {
  			color: $red;
  		}
+    a:hover {
+      text-decoration: none;
+    }
  	}
  }
 

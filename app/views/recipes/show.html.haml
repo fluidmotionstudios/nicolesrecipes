@@ -6,4 +6,6 @@
       #recipe_info
         %h1= @recipe.title
         %p.description= @recipe.description
-    = link_to "Edit", edit_recipe_path
+    = link_to "Go Back", recipes_path, class: "btn btn-primary"
+    \|
+    = link_to "Edit", edit_recipe_path, class: "btn btn-primary"
