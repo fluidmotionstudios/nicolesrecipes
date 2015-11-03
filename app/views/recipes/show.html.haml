@@ -6,6 +6,26 @@
       #recipe_info
         %h1= @recipe.title
         %p.description= @recipe.description
-    = link_to "Go Back", recipes_path, class: "btn btn-primary"
-    \|
-    = link_to "Edit", edit_recipe_path, class: "btn btn-primary"
+        %p
+          Recipe By:
+          =@recipe.user.name
+
+  .row
+    .col-md-6
+      #ingredients
+        %h2 Ingredients
+        %ul
+          - @recipe.ingredients.each do |ingredient|
+            %li= ingredient.name
+    .col-md-6
+      #directions
+        %h2 Directions
+        %ul
+          - @recipe.directions.each do |direction|
+            %li= direction.step
+  .row
+    .col-md-12
+      = link_to "Back", recipes_path, class: "btn btn-primary"
+      - if user_signed_in?
+        = link_to "Edit Recipe", edit_recipe_path, class: "btn btn-primary"
+        = link_to "Delete", recipe_path, method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-default"
