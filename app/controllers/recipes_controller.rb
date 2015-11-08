@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  skip_authorization_check :except => [:new, :edit, :update, :destroy]
+  #skip_authorization_check :except => [:new, :edit, :update, :destroy]
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
 
   # GET /recipes
