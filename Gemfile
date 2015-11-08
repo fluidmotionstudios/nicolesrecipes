@@ -24,6 +24,7 @@ gem "paperclip", "~> 4.3"
 gem 'cocoon', '~> 1.2', '>= 1.2.6'
 gem 'devise'
 gem 'cancancan', '~> 1.10'
+gem 'friendly_id', '~> 5.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
