@@ -1,9 +1,10 @@
-.row
-  - @recipes.each do |recipe|
-    .col-md-4
-      .recipe
-        .image_wrapper
-          = link_to recipe do
-            = image_tag recipe.image.url(:medium)
-        %h2= link_to recipe.title, recipe
-        %p.date= time_ago_in_words(recipe.created_at)
+.container
+  .row
+    - @recipes.each do |recipe|
+      .col-md-4
+        .recipe
+          .image_wrapper
+            = link_to recipe do
+              = image_tag recipe.image.url(:medium)
+              %h2= link_to recipe.title, recipe
+              %p.date= time_ago_in_words(recipe.created_at)

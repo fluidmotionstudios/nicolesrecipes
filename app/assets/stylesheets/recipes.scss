@@ -1,3 +1,20 @@
-// Place all the styles related to the Recipes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.form-new-recipe {
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-new-recipe .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-new-recipe input[type="text"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+}

@@ -1,9 +1,10 @@
-%h1 Edit Recipe
+.container
+  %h1 Edit Recipe
 
-= render 'form'
+  = render 'form'
 
-%br/
+  %br/
 
-= link_to 'All Recipes', recipes_path, class: "btn btn-primary"
-\|
-= link_to 'Cancel Editing', @recipe, class: "btn btn-danger"
+  = link_to 'All Recipes', recipes_path, class: "btn btn-primary"
+  \|
+  = link_to 'Cancel Editing', @recipe, class: "btn btn-danger"
