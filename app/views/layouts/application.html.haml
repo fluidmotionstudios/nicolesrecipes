@@ -10,7 +10,7 @@
   %body
     %nav.navbar.navbar-default.navbar-fixed-top
       .container
-        .navbar-brand= link_to "Nicole's Recipes", recipes_path
+        .navbar-brand= link_to "Nicole's Recipes", root_path
 
         - if user_signed_in?
           %ul.nav.navbar-nav.navbar-right
@@ -29,3 +29,5 @@
         = content_tag :div, msg, class: "alert"
 
     = yield
+<br/>
+<br/>
