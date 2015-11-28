@@ -25,7 +25,7 @@
             %li= direction.step
   .row
     .col-md-12
-      = link_to "Back", recipes_path, class: "btn btn-primary"
+      = link_to "All Recipes", recipes_path, class: "btn btn-primary"
       - if can? :update, @recipe
         = link_to "Edit Recipe", edit_recipe_path, class: "btn btn-primary"
       - if can? :destroy, @recipe
