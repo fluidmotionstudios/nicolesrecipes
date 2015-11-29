@@ -4,7 +4,7 @@
 			#errors
 				%p
 					= @recipe.errors.count
-					Errors prevented this recipe from saving. Please make sure that all fields are filled out.
+					Errors prevented this recipe from saving. Please correct the errors listed below.
 				%ul
 					- @recipe.errors.full_messages.each do |msg|
 						%li= msg
@@ -31,3 +31,4 @@
 						= link_to_add_association 'Add Step', f, :directions, class: "btn btn-default add-button"
 
 		= f.button :submit, class: "btn btn-success"
+		= link_to 'Cancel', recipes_path, class: "btn btn-danger"
